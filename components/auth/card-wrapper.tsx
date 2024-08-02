@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/card";
 import Header from "@/components/auth/header";
 import Social from "./social";
+import { BackButton } from "./back-button";
 interface CardWrapperProps {
   children?: React.ReactNode;
   headerLabel: string;
@@ -31,11 +32,14 @@ const CardWrapper = ({
         <Header label={headerLabel} />
       </CardHeader>
       <CardContent>{children}</CardContent>
-      {showSocial ? (
+      {showSocial && (
         <CardFooter>
           <Social />
         </CardFooter>
-      ) : null}
+      )}
+      <CardFooter>
+        <BackButton label={backButtonLabel} href={backButtonHref} />
+      </CardFooter>
     </Card>
   );
 };
