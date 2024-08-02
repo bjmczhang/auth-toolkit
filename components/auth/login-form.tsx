@@ -1,5 +1,5 @@
 import React from "react";
-import CardWrapper from "./card-wrapper";
+import CardWrapper from "@/components/auth/card-wrapper";
 
 const LoginForm = () => {
   return (
